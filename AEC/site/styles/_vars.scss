@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+$font-strict: 'Tenor Sans',
+sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$font-playful: 'Poppins',
+sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+$font: 'Inter',
+sans-serif;
+$font-code: Consolas,
+monaco,
+monospace;
+$transition: cubic-bezier(.8,
+-0.27,
+.2,
+1.27);
+$screen-huge: 1440px;
+$screen-large: 1280px;
+$screen-medium: 1024px;
+$screen-small: 768px;
+$screen-tiny: 600px;
+$screen-phone: 400px;
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    font-family: $font;
+    width: 100%;
+}
+
+@media screen and (max-width: $screen-large) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: $screen-medium) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: $screen-small) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: $screen-tiny) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: $screen-phone) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@for $i from 1 to 7 {
+    h#{$i} {
+        margin: (7-$i) * 0.3rem;
+        font-size: (7-$i) * 0.7rem;
+    }
+}
+
+h3 {
+    font-weight: 500;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+    border-radius: 0.3rem;
+    color: #fff;
+    background: #333;
+    box-sizing: border-box;
+    // border: 3px solid #888;
+}
+
+button:hover {
+    background: #000;
+}
+
+button:focus {
+    box-shadow: 0 0 0 3px #0008;
+}
+
+button:disabled {
+    background: #555;
+    color: #aaa;
+}

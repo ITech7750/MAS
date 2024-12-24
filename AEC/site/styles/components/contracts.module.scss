@@ -1,0 +1,23 @@
+.center {
+    padding: 0;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.heading {
+    text-align: center;
+    font-size: 18px;
+}
+
+.container {
+    width: 100%;
+    min-height: 64px;
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 12px;
+}

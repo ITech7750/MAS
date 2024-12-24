@@ -1,0 +1,34 @@
+{
+    "name": "aenet-next",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.36",
+        "@fortawesome/free-brands-svg-icons": "^5.15.4",
+        "@fortawesome/free-regular-svg-icons": "^5.15.4",
+        "@fortawesome/react-fontawesome": "^0.1.15",
+        "@types/react": "^17.0.18",
+        "firebase": "^8.9.1",
+        "next": "11.1.0",
+        "react": "17.0.2",
+        "react-compound-slider": "^3.3.1",
+        "react-dom": "17.0.2",
+        "react-hook-form": "^7.12.2",
+        "react-hot-toast": "^2.1.0",
+        "react-jobs": "^1.0.1",
+        "react-select": "^4.3.1",
+        "sass": "^1.38.0",
+        "yup": "^0.32.9"
+    },
+    "devDependencies": {
+        "eslint": "7.32.0",
+        "eslint-config-next": "11.1.0",
+        "typescript": "^4.3.5"
+    }
+}

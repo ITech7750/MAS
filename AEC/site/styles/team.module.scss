@@ -1,0 +1,31 @@
+.search {
+    input {
+        width: 100%;
+        height: 37px;
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        padding: 0 10px;
+    }
+}
+
+.select {
+    height: 32px;
+    .options {
+        height: 32px;
+    }
+}
+
+.count {
+    input {
+        width: 100%;
+        height: 37px;
+    }
+}
+
+.generate {
+    button {
+        height: 37px;
+        width: 100%;
+    }
+}

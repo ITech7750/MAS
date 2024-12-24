@@ -1,0 +1,103 @@
+@import 'lib';
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: cool-gray(1);
+    header {
+        width: 450px;
+        button {
+            background: #fff;
+            color: gray(8);
+            width: 50%;
+            border-radius: 0;
+            border-bottom: 2px solid gray(1);
+            outline: none;
+        }
+        button:first-of-type {
+            border-radius: 12px 0 0 0;
+        }
+        button:last-of-type {
+            border-radius: 0 12px 0 0;
+        }
+        button:focus {
+            border: none;
+            box-shadow: none;
+        }
+        .selectedTab {
+            background: linear-gradient(45deg, gray(8), gray(7));
+            color: #fff;
+        }
+    }
+}
+
+.form {
+    $element-width: 380px;
+    $width: 450px;
+    @include content-align(column);
+    align-items: center;
+    background-color: #fff;
+    position: relative;
+    width: $width;
+    height: 500px;
+    border-radius: 12px;
+    input {
+        font-size: 1.1rem;
+        display: block;
+        border: 0;
+        border-bottom: 1px #ccc solid;
+        width: $element-width;
+        height: 30px;
+        margin: 10px 0;
+        font-family: 'Inter';
+        outline: none;
+        font-weight: bold;
+        background: linear-gradient(90deg, sky(), sky-after() 50%);
+        color: #0000;
+        background-clip: text;
+        caret-color: sky(4);
+    }
+    input[type="submit" i] {
+        font-size: 1.2rem;
+        border-radius: 12px;
+        background: linear-gradient(91.45deg, #0094FF 6.98%, #00C2FF 83.31%);
+        color: #fff;
+        font: 'Inter';
+        height: 40px;
+        cursor: pointer;
+    }
+    .button {
+        width: $element-width;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        border-radius: 12px;
+        background: warm-gray(7);
+        color: #fff;
+        font: 'Inter';
+        font-weight: bold;
+        height: 40px;
+        &:hover {
+            background: warm-gray(8);
+        }
+    }
+}
+
+.label {
+    position: relative;
+    &>span {
+        position: absolute;
+        left: 0;
+        transition: transform .5s, color .5s;
+        top: 12px;
+    }
+    &>input:focus~span,
+    &.notEmpty span {
+        transform: scale(.8) translateY(-120%);
+        color: sky();
+        transform-origin: top left;
+    }
+}

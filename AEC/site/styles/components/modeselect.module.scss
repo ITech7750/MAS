@@ -1,0 +1,146 @@
+@import "lib";
+.form {
+    background: #fff;
+    border-radius: 12px;
+    .modes {
+        width: 100%;
+        @include content-align(center);
+        flex-direction: column;
+        margin: 20px 0;
+        .mode {
+            margin: 10px 20px;
+            @include content-align(center);
+            span,
+            i {
+                transition: 0.3s;
+            }
+            span {
+                background: gray(1);
+                width: 220px;
+                font-weight: bold;
+                color: gray(5);
+                height: 32px;
+                @include content-align(center);
+                justify-content: flex-start;
+                padding: 0 15px;
+                margin: 0 5px;
+                border-radius: 8px;
+            }
+            i {
+                color: gray(5);
+                border-radius: 8px;
+                margin: 0 5px;
+                width: 32px;
+                height: 32px;
+                @include content-align(center);
+                font-size: 16px;
+                background: gray(1);
+            }
+            i.next,
+            i.info {
+                color: #fffa;
+                background: linear-gradient(45deg, gray(6), gray(7));
+            }
+            i.next:hover,
+            i.info:hover {
+                background: linear-gradient(45deg, sky(), cyan-after());
+            }
+            button {
+                padding: 0;
+                background: none;
+                box-shadow: none;
+            }
+        }
+    }
+    .heading {
+        margin-top: 10px;
+    }
+    p {
+        max-width: 500px;
+        margin: 10px 25px;
+        text-align: justify;
+    }
+    .return {
+        width: 100%;
+        font-weight: bold;
+    }
+}
+
+.typeselector {
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-rows: auto;
+    button {
+        padding: 15px 25px;
+        transition: 0.3s;
+        border-radius: 0;
+        background: #fff;
+        box-shadow: none;
+        color: gray(7);
+        justify-self: stretch;
+        outline: 1px solid gray(1);
+        @include content-align(center);
+        flex-direction: column;
+        &:hover {
+            color: sky();
+            background: sky(1);
+        }
+        h5 {
+            font-size: 1.2rem;
+            margin: 10px -15px;
+        }
+        i {
+            font-size: 2rem;
+        }
+    }
+    button:disabled {
+        cursor: default;
+        background: gray(0);
+        color: gray(5);
+        outline-color: gray(2);
+    }
+}
+
+.selected {
+    background: sky() !important;
+    border-color: sky(6) !important;
+    color: #fffd !important;
+}
+
+.info {
+    margin-top: 20px;
+    width: 90%;
+    background: #fff;
+    border-radius: 12px;
+    height: 120px;
+    h5 {
+        width: 100%;
+        text-align: center;
+    }
+    p {
+        margin: 10px 25px;
+        text-align: justify;
+    }
+}
+
+.nextbutton {
+    margin-top: 10px;
+    margin-right: 5%;
+    align-self: flex-end;
+    color: #fff;
+    background: sky();
+    &:hover {
+        background: sky(6);
+    }
+    &:focus {
+        box-shadow: border(sky(), 3px);
+    }
+    &:disabled {
+        background: gray(3);
+        color: gray(5);
+    }
+}

@@ -1,0 +1,160 @@
+@import "../lib";
+.button {
+    transition: 0.3s;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 3fr 1fr;
+    background: #fff;
+    color: gray();
+    cursor: pointer;
+    i {
+        @include content-align(center);
+        font-size: 1.5rem;
+    }
+    h5 {
+        @include content-align(center);
+        margin: 0;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    &:hover {
+        background: sky(1);
+        color: sky(5);
+    }
+    &.locked {
+        color: gray(3);
+        background: gray(0);
+        cursor: default;
+    }
+    &.active {
+        color: #fffd;
+        background: sky();
+    }
+}
+
+.first {
+    border-radius: 12px 12px 0 0;
+}
+
+.last {
+    border-radius: 0 0 12px 12px;
+}
+
+.mainPanel {
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 12px;
+    p {
+        @include content-align(center);
+        flex-direction: column;
+        input {
+            outline: none;
+            border: none;
+            border-radius: 12px;
+            height: 24px;
+            background: gray(1);
+            width: 90%;
+            padding: 0 20px;
+        }
+    }
+}
+
+.agent {
+    height: 48px;
+    border-radius: 12px;
+    margin: 10px 10px;
+    background: gray(1);
+    color: gray(6);
+    display: grid;
+    grid-template-columns: 32px 5fr 3fr 4fr 5fr;
+    border: 2px solid gray(2);
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    .number {
+        height: 32px;
+        border-radius: 8px;
+        padding: 0 10px;
+        background: gray(3);
+        @include content-align(center);
+        color: gray(7);
+        font-weight: bold;
+        font-size: 16px;
+        margin: 10px;
+    }
+    .time {
+        height: 32px;
+        border-radius: 8px;
+        padding: 0 10px;
+        background: gray(3);
+        margin-left: 8px;
+        @include content-align(center);
+        color: gray(7);
+        font-weight: bold;
+        font-size: 16px;
+        margin: 10px;
+    }
+    .price {
+        height: 32px;
+        border-radius: 8px;
+        padding: 0 10px;
+        background: gray(3);
+        margin-left: 8px;
+        @include content-align(center);
+        color: gray(7);
+        font-weight: bold;
+        font-size: 16px;
+        margin: 10px;
+    }
+    .energy {
+        height: 32px;
+        border-radius: 8px;
+        padding: 0 10px;
+        background: gray(3);
+        margin-left: 8px;
+        @include content-align(center);
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        color: gray(7);
+        font-weight: bold;
+        font-size: 16px;
+        margin: 10px;
+        div {
+            @include content-align(center);
+        }
+        div:first-of-type {
+            border-right: 2px solid gray(4);
+        }
+    }
+    i {
+        width: 32px;
+        height: 32px;
+        @include content-align(center);
+        background: gray(3);
+        border-radius: 8px;
+    }
+    &.main {
+        border-color: sky(3);
+        border-width: 3px;
+        color: #fff;
+        background: sky();
+        .time,
+        .energy,
+        i,
+        .price,
+        .number {
+            background: sky(6);
+            color: #fff;
+        }
+        .energy>div {
+            border-color: #fff;
+        }
+    }
+}
+
+.agentPanel {
+    overflow-y: scroll;
+}
